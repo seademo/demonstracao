@@ -13,7 +13,7 @@
 	if (isset($entrar)) {
 	  $verifica = $conn->query("SELECT * FROM usuarios WHERE login = '$login' AND senha = '$senha'");
 	    if (mysqli_num_rows($verifica)<=0){
-	      echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos');window.location.href='login.html';</script>";
+	      echo"<script language='javascript' type='text/javascript'>alert('Login e/ou senha incorretos. Se não possuir usuário Cadastre-se.');window.location.href='login.html';</script>";
 	      die();
 	    }else{
 	      setcookie("login",$login);
