@@ -3,6 +3,7 @@
   #$image='https://blog.openshift.com/wp-content/uploads/Logotype_RH_OpenShiftContainerPlatform_wLogo_CMYK_Black.jpg';
   $image="images/logo_openshift.jpg";
 	echo "<h2> Demonstração Openshift na prática!!! <br><br></h2>";
+	echo "<h2> Demonstração TESTE!!! <br><br></h2>";
 	echo '<img src="'.$image.'" width="400" height="80" /><br>';
 	echo $_SERVER['SERVER_ADDR'];
 
