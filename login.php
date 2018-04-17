@@ -2,7 +2,7 @@
 	$login = $_POST["login"];
 	$entrar = $_POST["entrar"];
 	$senha = md5($_POST["senha"]);
-	$conn = new mysqli("mysql", "dbuser", "redhat@123", "sampledb");
+	$conn = new mysqli("mysql", $username, $password, $database_name);
 	# $conn = new mysqli("$servername", "$username", "$password", "$database");
 
 	if ($conn->connect_error) {
