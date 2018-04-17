@@ -3,13 +3,8 @@
 	$entrar = $_POST["entrar"];
 	$senha = md5($_POST["senha"]);
 
-	$server = "mysql";
-	$user = $username;
-	$pass = $password;
-	$db = $database_name;
-
 	#$conn = new mysqli($server, $user, $pass, $db);
-	$conn = new mysqli(("mysql", "dbuser", "redhat@123", "sampledb");
+	$conn = new mysqli("mysql", "dbuser", "redhat@123", "sampledb");
 
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);
