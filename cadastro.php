@@ -1,5 +1,6 @@
 <?php 
 
+$nome = $_POST['nome'];
 $login = $_POST['login'];
 $senha = MD5($_POST['senha']);
 
@@ -26,7 +27,7 @@ $logarray = $array['login'];
         die();
  
       }else{
-        $query = "INSERT INTO usuarios (login,senha) VALUES ('$login','$senha')";
+        $query = "INSERT INTO usuarios (nome,login,senha) VALUES ('nome','$login','$senha')";
         $insert = $connect->query($query);
          
         if($insert){

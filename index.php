@@ -5,8 +5,7 @@
 	echo "<h2> Demonstração Openshift na prática!!! <br><br></h2>";
 	echo '<img src="'.$image.'" width="400" height="80" /><br>';
   echo "<br><hr>";
-  echo"<br><br><br> <a href='usuarios.php'> Consulta usuários</a>";
-
+  
     if(isset($login_cookie))
     {
       echo"<br>Bem vindo, $login_cookie !!!<br>";
@@ -23,6 +22,8 @@
       echo"<br><br>Bem vindo, convidado !!!<br>";
       echo"<br> Essas informações <font color='red'> NÃO PODEM </font> ser acessadas por você.<br>";
       echo"<br> Para ler o conteúdo é necessário efetuar o login. <br>";
+
+      echo"<br><br><br> <a href='usuarios.php'> Consulta usuários</a><br><br>";
       echo"<br><h1> <a href='login.html'> Login</a>";
     }
 ?>

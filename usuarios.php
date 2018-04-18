@@ -19,10 +19,14 @@ $result = $conn->query("SELECT login FROM usuarios");
 if ($result->num_rows > 0) {
     echo "<table>";
         echo "<tr>";
+            echo "<th>ID</th>";
+            echo "<th>Nome</th>";
             echo "<th>Login</th>";
         echo "</tr>";
         while($row = $result->fetch_assoc()) {
         echo "<tr>";
+            echo "<td>" . $row['id'] . "</td>";
+            echo "<td>" . $row['nome'] . "</td>";
             echo "<td>" . $row['login'] . "</td>";
         echo "</tr>";
         }
