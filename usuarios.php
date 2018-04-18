@@ -6,14 +6,14 @@ $pass = $_ENV["password"];
 $db = $_ENV["database_name"];
 
 echo "<h1> Demonstração Openshift <br><hr></h1> ";
-echo "<h2>Usuários cadastrados no Banco de Dados:</h2>";
-echo "<br><hr>";
 
 $conn = new mysqli($server, $user, $pass, $db);
 
 if ($conn->connect_error) {
     die("Conexão ao banco de dados falhou: " . $conn->connect_error);
 }
+
+$result = $conn->query("SELECT * FROM usuarios");
 
 $conn->close();
 
@@ -115,7 +115,7 @@ $conn->close();
 		<tbody>
 		<?php
 		$no 	= 1;
-		while ($row = mysqli_fetch_array($query))
+		while ($row = mysqli_fetch_array($result))
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
 			echo '<tr>
