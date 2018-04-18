@@ -15,6 +15,9 @@ if ($conn->connect_error) {
     die("Conexão ao banco de dados falhou: " . $conn->connect_error);
 }
 
+$conn->close();
+
+?>
 <html>
 <head>
 	<title>Displaying MySQL Data in HTML Table</title>
@@ -126,7 +129,3 @@ if ($conn->connect_error) {
 	</table>
 </body>
 </html>
-
-$conn->close();
-
-?>
