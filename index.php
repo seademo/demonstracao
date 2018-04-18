@@ -3,18 +3,20 @@
   #$image='https://blog.openshift.com/wp-content/uploads/Logotype_RH_OpenShiftContainerPlatform_wLogo_CMYK_Black.jpg';
   $image="images/logo_openshift.jpg";
 	echo "<h2> Demonstração Openshift na prática!!! <br><br></h2>";
-	echo "<h2> Demonstração TESTE!!! <br><br></h2>";
 	echo '<img src="'.$image.'" width="400" height="80" /><br>';
-	echo $_SERVER['SERVER_ADDR'];
+  echo "<br><hr>";
+  echo"<br><br><br> <a href='usuarios.php'> Consulta usuários</a>";
 
     if(isset($login_cookie))
     {
       echo"<br>Bem vindo, $login_cookie !!!<br>";
+      echo $_SERVER['SERVER_ADDR'];
+      echo "<br><hr>";
       echo"<br> <font color='red'>RED HAT</font> ";
-	  echo"<br><font color='red'> OPENSHIFT</font>";
-	  echo"<br> <font color='green'>Sea Tecnologia </font>";
-	  echo"<br> Essas informações <font color='red'>PODEM</font> ser acessadas por você.";
-	  echo"<br><br><br> <a href='logout.php'> Logout</a>";
+      echo"<br><font color='red'> OPENSHIFT</font>";
+      echo"<br> <font color='green'>Sea Tecnologia </font>";
+      echo"<br> Essas informações <font color='red'>PODEM</font> ser acessadas por você.";
+      echo"<br><br><br> <a href='logout.php'> Logout</a>";
     }
     else
     {
