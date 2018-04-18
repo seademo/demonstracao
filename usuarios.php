@@ -120,7 +120,6 @@ $conn->close();
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
 			echo '<tr>
 					<td>'.$no.'</td>
-					<td>'.$row['ID'].'</td>
                     <td>'.$row['nome'].'</td>
                     <td>'.$row['login'].'</td>
 				</tr>';
@@ -128,4 +127,7 @@ $conn->close();
 		}?>
 	</table>
 </body>
+
+<br><h1> <a href='index.php'> Voltar</a>
+
 </html>
