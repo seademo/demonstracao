@@ -28,7 +28,7 @@ if ($result->num_rows > 0) {
         }
     echo "</table>";
 }
-} else {
+else {
     echo "0 results";
 }
 
