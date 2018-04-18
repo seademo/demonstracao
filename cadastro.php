@@ -27,7 +27,7 @@ $logarray = $array['login'];
         die();
  
       }else{
-        $query = "INSERT INTO usuarios (nome,login,senha) VALUES ('nome','$login','$senha')";
+        $query = "INSERT INTO usuarios (nome,login,senha) VALUES ('$nome','$login','$senha')";
         $insert = $connect->query($query);
          
         if($insert){

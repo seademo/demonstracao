@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     die("Conexão ao banco de dados falhou: " . $conn->connect_error);
 }
 
-$result = $conn->query("SELECT login FROM usuarios");
+$result = $conn->query("SELECT * FROM usuarios");
 if ($result->num_rows > 0) {
     echo "<table>";
         echo "<tr>";
