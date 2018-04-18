@@ -9,7 +9,6 @@ $pass = getenv("password");
 $db = getenv("database_name");
 
 $connect = new mysqli($server, $user, $pass, $db);
-#$connect = new mysqli("mysql", "dbuser", "redhat@123", "sampledb");
 
 $db = mysqli_select_db($connect,"sampledb");
 $query_select = "SELECT login FROM usuarios WHERE login = '$login'";
