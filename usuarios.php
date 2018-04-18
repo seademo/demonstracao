@@ -112,7 +112,6 @@ if ($conn->connect_error) {
 		<tbody>
 		<?php
 		$no 	= 1;
-		$total 	= 0;
 		while ($row = mysqli_fetch_array($query))
 		{
 			$amount  = $row['amount'] == 0 ? '' : number_format($row['amount']);
@@ -122,16 +121,8 @@ if ($conn->connect_error) {
                     <td>'.$row['nome'].'</td>
                     <td>'.$row['login'].'</td>
 				</tr>';
-			$total += $row['amount'];
 			$no++;
 		}?>
-		</tbody>
-		<tfoot>
-			<tr>
-				<th colspan="4">TOTAL</th>
-				<th><?=number_format($total)?></th>
-			</tr>
-		</tfoot>
 	</table>
 </body>
 </html>
