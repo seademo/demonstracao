@@ -19,11 +19,11 @@
     }
     else
     {
-      echo"<br><br>Bem vindo, convidado !!!<br>";
+      echo"<br><br><h3>Bem vindo, convidado !!!<br>";
       echo"<br> Essas informações <font color='red'> NÃO PODEM </font> ser acessadas por você.<br>";
       echo"<br> Para ler o conteúdo é necessário efetuar o login. <br>";
 
-      echo"<br><br><br> <a href='usuarios.php'> Consulta usuários</a><br><br>";
-      echo"<br><h1> <a href='login.html'> Login</a>";
+      echo"<br><br><br> <a href='usuarios.php'> Consulta usuários</a><br>";
+      echo"<br><h2> <a href='login.html'> LOGIN</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href='cadastro.html'> CADASTRO</a>";
     }
 ?>
