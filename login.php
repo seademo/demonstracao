@@ -3,10 +3,10 @@
 	$entrar = $_POST["entrar"];
 	$senha = md5($_POST["senha"]);
 
-	$server = getenv("mysql");
-	$user = getenv("username");
-	$pass = getenv("password");
-	$db = getenv("database_name");
+	$server = "mysql";
+	$user = $_ENV["username"];
+	$pass = $_ENV["password"];
+	$db = $_ENV["database_name"];
 
 	$conn = new mysqli($server, $user, $pass, $db);
 

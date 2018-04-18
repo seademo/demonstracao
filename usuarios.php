@@ -1,12 +1,11 @@
 <?php 
 
-$server = getenv("mysql");
-$user = getenv("username");
-$pass = getenv("password");
-$db = getenv("database_name");
+$server = "mysql";
+$user = $_ENV["username"];
+$pass = $_ENV["password"];
+$db = $_ENV["database_name"];
 
 echo "<h1> Demonstração Openshift <br><hr></h1> ";
-echo "<br><hr>";
 echo "<h2>Usuários cadastrados no Banco de Dados:</h2>";
 echo "<br><hr>";
 
@@ -18,9 +17,17 @@ if ($conn->connect_error) {
 
 $result = $conn->query("SELECT login FROM usuarios");
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        echo "<h3>" . $row["login"] . "</h3>";
-    }
+    echo "<table>";
+        echo "<tr>";
+            echo "<th>Login</th>";
+        echo "</tr>";
+        while($row = $result->fetch_assoc()) {
+        echo "<tr>";
+            echo "<td>" . $row['login'] . "</td>";
+        echo "</tr>";
+        }
+    echo "</table>";
+}
 } else {
     echo "0 results";
 }
